@@ -196,26 +196,12 @@ function createPropertyMarker(property) {
     iconAnchor: [20, 40]
   });
   
-  // Popup content
+  // Popup content - just image
   const propertyUrl = `/listings/${property.listingId}`;
-  const priceRange = formatPriceRange(property.priceMin, property.priceMax);
   
   const popupContent = `
-    <a href="${propertyUrl}" style="text-decoration: none; color: inherit; display: block;">
-      <div style="font-family: 'Manrope', sans-serif;">
-        ${property.featuredImage ? `<img src="${property.featuredImage}" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px 12px 0 0; display: block;" alt="${property.name}">` : ''}
-        <div style="padding: 12px;">
-          <div style="font-size: 13px; color: #717171; margin-bottom: 4px;">
-            ${property.city}, ${property.state}
-          </div>
-          <h3 style="font-size: 16px; font-weight: 600; color: #0F2C3A; margin: 0 0 8px 0; line-height: 1.3;">
-            ${property.name}
-          </h3>
-          <div style="font-size: 15px; font-weight: 600; color: #0F2C3A;">
-            ${priceRange}<span style="font-weight: 400; font-size: 13px;">/night</span>
-          </div>
-        </div>
-      </div>
+    <a href="${propertyUrl}" style="text-decoration: none; display: block;">
+      ${property.featuredImage ? `<img src="${property.featuredImage}" style="width: 280px; height: 200px; object-fit: cover; display: block; border-radius: 12px;" alt="${property.name}">` : ''}
     </a>
   `;
   
