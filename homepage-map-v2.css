@@ -5,6 +5,18 @@
 #standalone-map-container {
   position: relative;
   background: #e0e0e0;
+  max-width: 100% !important;
+}
+
+#standalone-map-container.leaflet-container {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Ensure map doesn't overflow parent */
+.w-embed #standalone-map-container {
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 /* Leaflet attribution - keep minimal */
@@ -140,12 +152,31 @@
     border-radius: 12px;
   }
   
+  /* Mobile popup fixes - wider and better proportions */
   .standalone-custom-popup .leaflet-popup-content-wrapper {
-    max-width: 90vw !important;
+    max-width: calc(100vw - 40px) !important;
+    width: auto !important;
   }
   
   .standalone-custom-popup .leaflet-popup-content {
     width: auto !important;
-    max-width: 280px !important;
+    min-width: 260px !important;
+    max-width: calc(100vw - 60px) !important;
+    margin: 0 !important;
+  }
+  
+  /* Make image shorter on mobile */
+  .standalone-custom-popup img {
+    height: 120px !important;
+    object-fit: cover;
+  }
+  
+  /* Better text sizing on mobile */
+  .standalone-custom-popup h3 {
+    font-size: 15px !important;
+  }
+  
+  .standalone-custom-popup .leaflet-popup-content > a > div {
+    padding: 0 12px 12px !important;
   }
 }
