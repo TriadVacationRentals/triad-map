@@ -201,7 +201,7 @@ function createPropertyMarker(property) {
   
   const popupContent = `
     <a href="${propertyUrl}" style="text-decoration: none; display: block;">
-      ${property.featuredImage ? `<img src="${property.featuredImage}" style="width: 280px; height: 200px; object-fit: cover; display: block; border-radius: 12px;" alt="${property.name}">` : ''}
+      ${property.featuredImage ? `<img src="${property.featuredImage}" class="popup-property-image" alt="${property.name}">` : ''}
     </a>
   `;
   
