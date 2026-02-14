@@ -174,8 +174,9 @@
     width: auto !important;
   }
   
-  .standalone-custom-popup .leaflet-popup-content-wrapper .leaflet-popup-content {
-    width: auto !important;
+  /* THIS is the key - override the desktop 280px width */
+  .standalone-custom-popup .leaflet-popup-content {
+    width: calc(100vw - 60px) !important;
     max-width: calc(100vw - 60px) !important;
     margin: 0 !important;
   }
