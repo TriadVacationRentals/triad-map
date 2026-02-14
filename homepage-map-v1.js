@@ -1,9 +1,13 @@
 // ============================================
 // STANDALONE PROPERTY MAP
 // Displays all properties on an interactive map
+// Wrapped in IIFE to avoid conflicts with other scripts
 // ============================================
 
-const WORKER_URL = 'https://hostaway-proxy.triad-sync.workers.dev';
+(function() {
+  'use strict';
+  
+  const WORKER_URL = 'https://hostaway-proxy.triad-sync.workers.dev';
 
 let standaloneMap = null;
 let standaloneMarkers = [];
@@ -320,3 +324,5 @@ if (document.readyState === 'loading') {
 } else {
   initStandaloneMap();
 }
+
+})(); // End IIFE
