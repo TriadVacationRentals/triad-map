@@ -178,10 +178,10 @@
   #standalone-map-container .leaflet-popup-content a img {
     width: 100% !important;
     height: auto !important;
-    max-width: 100%;
-    max-height: 50vh;
-    object-fit: cover;
-    border-radius: 12px;
-    display: block;
+    max-width: 100% !important;
+    max-height: 50vh !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+    display: block !important;
   }
 }
