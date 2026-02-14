@@ -162,20 +162,24 @@
     border-radius: 12px;
   }
   
-  /* Image-only popup on mobile */
-  .standalone-custom-popup .leaflet-popup-content-wrapper {
+  /* Image-only popup on mobile - use global selectors */
+  #standalone-map-container .leaflet-popup-content-wrapper {
     max-width: calc(100vw - 40px) !important;
+    border-radius: 12px !important;
   }
   
-  .standalone-custom-popup .leaflet-popup-content {
+  #standalone-map-container .leaflet-popup-content {
     width: auto !important;
     max-width: calc(100vw - 60px) !important;
+    margin: 0 !important;
   }
   
-  .standalone-custom-popup .leaflet-popup-content img {
+  #standalone-map-container .leaflet-popup-content img {
     width: 100% !important;
     height: auto !important;
+    max-width: 100%;
     max-height: 50vh;
     object-fit: cover;
+    border-radius: 12px;
   }
 }
