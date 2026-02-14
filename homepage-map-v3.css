@@ -94,10 +94,10 @@
   color: white;
 }
 
-/* Custom popup styling */
+/* Custom popup styling - image only */
 .standalone-custom-popup .leaflet-popup-content-wrapper {
   padding: 0 !important;
-  border-radius: 16px !important;
+  border-radius: 12px !important;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
   overflow: hidden !important;
 }
@@ -105,6 +105,16 @@
 .standalone-custom-popup .leaflet-popup-content {
   margin: 0 !important;
   width: 280px !important;
+  line-height: 0;
+}
+
+.standalone-custom-popup .leaflet-popup-content img {
+  border-radius: 12px;
+  transition: transform 0.2s;
+}
+
+.standalone-custom-popup .leaflet-popup-content a:hover img {
+  transform: scale(1.02);
 }
 
 .standalone-custom-popup .leaflet-popup-tip-container {
@@ -152,31 +162,20 @@
     border-radius: 12px;
   }
   
-  /* Mobile popup fixes - wider and better proportions */
+  /* Image-only popup on mobile */
   .standalone-custom-popup .leaflet-popup-content-wrapper {
     max-width: calc(100vw - 40px) !important;
-    width: auto !important;
   }
   
   .standalone-custom-popup .leaflet-popup-content {
     width: auto !important;
-    min-width: 260px !important;
     max-width: calc(100vw - 60px) !important;
-    margin: 0 !important;
   }
   
-  /* Make image shorter on mobile */
-  .standalone-custom-popup img {
-    height: 120px !important;
+  .standalone-custom-popup .leaflet-popup-content img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 50vh;
     object-fit: cover;
-  }
-  
-  /* Better text sizing on mobile */
-  .standalone-custom-popup h3 {
-    font-size: 15px !important;
-  }
-  
-  .standalone-custom-popup .leaflet-popup-content > a > div {
-    padding: 0 12px 12px !important;
   }
 }
