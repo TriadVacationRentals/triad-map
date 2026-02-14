@@ -117,7 +117,7 @@ async function initializeLeafletMap(properties) {
   
   // Initialize map
   standaloneMap = L.map('standalone-map-container', {
-    zoomControl: true,
+    zoomControl: false, // Remove zoom controls
     attributionControl: false,
     maxBounds: maxBounds,
     maxBoundsViscosity: 1.0
@@ -203,12 +203,12 @@ function createPropertyMarker(property) {
   const popupContent = `
     <a href="${propertyUrl}" style="text-decoration: none; color: inherit; display: block;">
       <div style="font-family: 'Manrope', sans-serif;">
-        ${property.featuredImage ? `<img src="${property.featuredImage}" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px 12px 0 0; margin-bottom: 12px;" alt="${property.name}">` : ''}
-        <div style="padding: 0 8px 8px;">
+        ${property.featuredImage ? `<img src="${property.featuredImage}" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px 12px 0 0; display: block;" alt="${property.name}">` : ''}
+        <div style="padding: 12px;">
           <div style="font-size: 13px; color: #717171; margin-bottom: 4px;">
             ${property.city}, ${property.state}
           </div>
-          <h3 style="font-size: 16px; font-weight: 600; color: #0F2C3A; margin: 0 0 8px 0;">
+          <h3 style="font-size: 16px; font-weight: 600; color: #0F2C3A; margin: 0 0 8px 0; line-height: 1.3;">
             ${property.name}
           </h3>
           <div style="font-size: 15px; font-weight: 600; color: #0F2C3A;">
