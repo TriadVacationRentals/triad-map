@@ -167,20 +167,21 @@
     border-radius: 12px;
   }
   
-  /* Image-only popup on mobile */
+  /* Image-only popup on mobile - fix selectors for Leaflet structure */
   .standalone-custom-popup .leaflet-popup-content-wrapper {
     max-width: calc(100vw - 40px) !important;
     border-radius: 12px !important;
+    width: auto !important;
   }
   
-  .standalone-custom-popup .leaflet-popup-content {
+  .standalone-custom-popup .leaflet-popup-content-wrapper .leaflet-popup-content {
     width: auto !important;
     max-width: calc(100vw - 60px) !important;
     margin: 0 !important;
   }
   
   /* Mobile image - responsive */
-  .popup-property-image {
+  .standalone-custom-popup .popup-property-image {
     width: 100% !important;
     height: auto !important;
     max-height: 50vh !important;
