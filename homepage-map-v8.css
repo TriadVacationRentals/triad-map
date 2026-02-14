@@ -168,12 +168,12 @@
   }
   
   /* Image-only popup on mobile */
-  #standalone-map-container .leaflet-popup-content-wrapper {
+  .standalone-custom-popup .leaflet-popup-content-wrapper {
     max-width: calc(100vw - 40px) !important;
     border-radius: 12px !important;
   }
   
-  #standalone-map-container .leaflet-popup-content {
+  .standalone-custom-popup .leaflet-popup-content {
     width: auto !important;
     max-width: calc(100vw - 60px) !important;
     margin: 0 !important;
