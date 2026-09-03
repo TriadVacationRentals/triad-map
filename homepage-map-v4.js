@@ -124,7 +124,7 @@ async function initializeLeafletMap(properties) {
   }).setView([avgLat, avgLng], 6);
   
   // Add tile layer
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?=cb1_2v5k_1_6c598657c911e8e2b442eb97', {
     maxZoom: 14,
     minZoom: 4
   }).addTo(standaloneMap);
